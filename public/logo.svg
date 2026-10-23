@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Arya Katoch">
+  <defs>
+    <linearGradient id="ring" x1="24" y1="18" x2="136" y2="142" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.55" stop-color="#5000ca"/>
+      <stop offset="1" stop-color="#2E1065"/>
+    </linearGradient>
+    <linearGradient id="face" x1="40" y1="36" x2="120" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1035"/>
+      <stop offset="1" stop-color="#0D1116"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="80" cy="80" r="76" fill="url(#ring)"/>
+  <!-- Inner face -->
+  <circle cx="80" cy="80" r="64" fill="url(#face)"/>
+  <!-- Hairline accent ring -->
+  <circle cx="80" cy="80" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- Elegant AK monogram -->
+  <g fill="none" stroke="#F5F3FF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A -->
+    <path d="M52 108 L80 44 L108 108" stroke-width="6.5"/>
+    <path d="M64 86 H96" stroke-width="5"/>
+    <!-- K overlapping lightly on the right stem feel -->
+    <path d="M98 44 V108" stroke-width="6.5" opacity="0.95"/>
+    <path d="M98 78 L124 44" stroke-width="6.5"/>
+    <path d="M98 78 L124 108" stroke-width="6.5"/>
+  </g>
+
+  <!-- Soft highlight -->
+  <path
+    d="M40 52 C52 34, 108 28, 124 48"
+    fill="none"
+    stroke="rgba(255,255,255,0.16)"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+</svg>
