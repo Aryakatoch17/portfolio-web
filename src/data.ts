@@ -6,6 +6,8 @@ export const profile = {
   email: 'aryakatoch06@gmail.com',
   github: 'https://github.com/Aryakatoch17',
   linkedin: 'https://www.linkedin.com/in/aryakatoch/',
+  instagram: 'https://www.instagram.com/arya_katoch17/',
+  x: 'https://x.com/KatochArya',
   avatar: '/logo.jpg',
 }
 

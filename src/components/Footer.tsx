@@ -13,6 +13,12 @@ export function Footer() {
         <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
           LinkedIn
         </a>
+        <a href={profile.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
+          Instagram
+        </a>
+        <a href={profile.x} target="_blank" rel="noreferrer" aria-label="X">
+          X
+        </a>
       </div>
     </footer>
   )

@@ -152,21 +152,69 @@ ul {
   color: var(--accent);
 }
 
-.mode-toggle {
+.theme-switch {
+  position: relative;
+  width: 58px;
+  height: 30px;
+  border: none;
+  border-radius: 999px;
+  background: #3a3f46;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.theme-switch.light {
+  background: #7ec8e8;
+}
+
+.theme-switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 2;
+}
+
+.theme-switch.light .theme-switch-knob {
+  transform: translateX(28px);
+}
+
+.theme-switch-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: none;
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
-  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
-.mode-toggle:hover {
-  color: var(--accent);
+.theme-switch-icon.sun {
+  left: 6px;
+  opacity: 0;
+}
+
+.theme-switch-icon.moon {
+  right: 5px;
+  opacity: 1;
+}
+
+.theme-switch.light .theme-switch-icon.sun {
+  opacity: 1;
+}
+
+.theme-switch.light .theme-switch-icon.moon {
+  opacity: 0;
 }
 
 .nav-toggle {

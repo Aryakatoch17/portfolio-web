@@ -35,26 +35,31 @@ export function Nav({ mode, onToggleMode }: Props) {
         </nav>
 
         <button
-          className="mode-toggle"
+          type="button"
+          className={`theme-switch${mode === 'light' ? ' light' : ''}`}
           onClick={onToggleMode}
+          role="switch"
+          aria-checked={mode === 'light'}
           aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           title={mode === 'dark' ? 'Light mode' : 'Dark mode'}
         >
-          {mode === 'dark' ? (
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <span className="theme-switch-icon sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <circle cx="12" cy="12" r="4" fill="#F5C518" />
+              <g stroke="#F5C518" strokeWidth="2" strokeLinecap="round">
+                <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" />
+              </g>
+            </svg>
+          </span>
+          <span className="theme-switch-icon moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="15" height="15">
               <path
-                fill="currentColor"
-                d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm9-8a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5 12a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zm12.95 6.36a1 1 0 010 1.41l-.7.7a1 1 0 11-1.41-1.41l.7-.7a1 1 0 011.41 0zM7.76 6.34a1 1 0 010 1.41l-.7.7A1 1 0 015.64 7l.7-.7a1 1 0 011.42 0zm9.9-1.41a1 1 0 010 1.41l-.7.7A1 1 0 0115.54 5.6l.7-.7a1 1 0 011.42 0zM7.05 17.66a1 1 0 010 1.41l-.7.7a1 1 0 11-1.41-1.41l.7-.7a1 1 0 011.41 0z"
+                fill="#E8EEF8"
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
               />
             </svg>
-          ) : (
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M12.1 22c-5.2-.3-9.3-4.7-9.1-9.9.2-4.5 3.7-8.2 8.1-8.9.6-.1 1.1.5.9 1.1A7.5 7.5 0 0119.7 14c.5-.1 1.1.4 1 1-.6 4-4.1 6.9-8.6 7z"
-              />
-            </svg>
-          )}
+          </span>
+          <span className="theme-switch-knob" aria-hidden="true" />
         </button>
 
         <button
