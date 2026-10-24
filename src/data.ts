@@ -160,11 +160,11 @@ export const projects: Project[] = [
   {
     title: 'Retrieva',
     blurb:
-      'Full-stack hybrid retrieval system in Rust — ingest docs, BM25 + dense search, fusion/rerank, and serve results over REST/gRPC for RAG apps.',
+      'Backend hybrid retrieval engine in Rust — ingest docs, BM25 + dense search, fusion/rerank, and serve results over REST/gRPC. Benchmarked on SciFact (dense nDCG@10 = 0.6845).',
     href: 'https://github.com/Aryakatoch17/Retrieva',
     live: null,
     accent: '#1fa37f',
-    image: '/retrieva.jpg',
+    image: '/retrieva.png',
   },
   {
     title: 'FitSync',
@@ -187,10 +187,10 @@ export const projects: Project[] = [
   {
     title: 'ECG Image → Signal',
     blurb:
-      'Deep learning research pipeline (CNN-Transformer) that reconstructs digital ECG signals from clinical plots — Pearson r = 0.9720 on held-out data.',
+      'Deep learning research pipeline (CNN-Transformer) that reconstructs digital ECG signals from clinical plots — mean Pearson r = 0.9720, R² = 0.9451 on held-out data.',
     href: 'https://github.com/Aryakatoch17/ecg-image-to-signal',
     live: null,
     accent: '#ff6b6b',
-    image: '/ecg.jpg',
+    image: '/ecg.png',
   },
 ]
